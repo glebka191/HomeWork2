@@ -3,7 +3,7 @@ package collections
 import collections.task_collections._
 import org.scalatest.flatspec.AnyFlatSpec
 
-class check_collections extends AnyFlatSpec {
+class check_collections_task extends AnyFlatSpec {
 
   "check capitalizeIgnoringASCII" should "ok" in  {
     assert(capitalizeIgnoringASCII(List("Lorem", "ipsum", "dolor", "sit", "amet")) == List("Lorem", "IPSUM", "DOLOR", "SIT", "AMET"))
@@ -21,7 +21,6 @@ class check_collections extends AnyFlatSpec {
   "check intersectionAuto" should "ok" in {
     val dealerOne = Vector(Auto("BMW", "i3"), Auto("Mazda", "X5"))
     val dealerTwo = Seq(Auto("BMW", "i3"), Auto("Mazda", "X5"))
-    assert(intersectionAuto(dealerOne, dealerTwo) === Set(Auto("BMW", "i3"), Auto("Mazda", "X5")))
     assert(intersectionAuto(dealerOne, dealerTwo) === Set(Auto("BMW", "i3"), Auto("Mazda", "X5")))
   }
 

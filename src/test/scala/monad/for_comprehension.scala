@@ -1,4 +1,4 @@
-package collections
+package monad
 
 import org.scalatest.flatspec.AnyFlatSpec
 
