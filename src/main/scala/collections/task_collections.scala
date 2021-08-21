@@ -2,7 +2,7 @@ package collections
 
 object task_collections {
 
-  def isASCIIString(str: String): Boolean = str.matches("[aZ]")
+  def isASCIIString(str: String): Boolean = str.matches("[A-Za-z]+")
 
   /**
    * Реализуйте метод который первый элемент списка не изменяет, а для последующих алгоритм следующий:
@@ -27,7 +27,9 @@ object task_collections {
    *
    * HINT: Для всех возможных комбинаций чисел стоит использовать Map
    * **/
-  def numbersToNumericString(text: String): String = ???
+  def numbersToNumericString(text: String): String = {
+    ???
+  }
 
   /**
    *
@@ -49,7 +51,7 @@ object task_collections {
    * Реализуйте метод который примет две коллекции (два источника) и вернёт объеденённый уникальный список
    **/
   def intersectionAuto(dealerOne: Iterable[Auto], dealerTwo: Iterable[Auto]): Iterable[Auto] = {
-   ???
+    ???
   }
 
   /**
