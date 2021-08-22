@@ -1,9 +1,7 @@
 package collections
 
 object task_collections {
-
   def isASCIIString(str: String): Boolean = str.matches("[A-Za-z]+")
-
   /**
    * Реализуйте метод который первый элемент списка не изменяет, а для последующих алгоритм следующий:
    * если isASCIIString is TRUE тогда пусть каждый элемент строки будет в ВЕРХНЕМ регистре
@@ -15,8 +13,14 @@ object task_collections {
    * HINT: Тут удобно использовать collect и zipWithIndex
    *
    * **/
+  //Пока не понял куда zipWithIndex запихнуть
   def capitalizeIgnoringASCII(text: List[String]): List[String] = {
-    List.empty
+    text.collect {
+      case word => if (word != text(0)) {
+        if (isASCIIString(word)) word.toUpperCase
+        else word.toLowerCase
+      } else word
+    }
   }
 
   /**
@@ -29,7 +33,14 @@ object task_collections {
    * HINT: Для всех возможных комбинаций чисел стоит использовать Map
    * **/
   def numbersToNumericString(text: String): String = {
-    ""
+    val listWord = text.split(' ') // Нужно дописать сплит, проверять на символы
+    val str = listWord.map{
+      case "0" => "zero" case "1" => "one" case "3" => "three" case "4" => "four" case "5" => "five" case "6" => "six"
+      case "7" => "seven" case "8" => "eight" case "9" => "nine" case "10" => "ten" case any => any
+    }
+    val a = new StringBuilder
+    str.foreach(x => a.append(x + " "))
+    a.toString
   }
 
   /**
