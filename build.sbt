@@ -1,10 +1,10 @@
 import _root_.sbt.Keys._
 
-name := "collection_homework"
+name := "HomeWork2"
 
 version := "0.1"
 
-scalaVersion := "2.13.3"
+scalaVersion := "2.11.13"
 
 scalacOptions := List(
   "-encoding",
@@ -13,8 +13,7 @@ scalacOptions := List(
   "-unchecked",
   "-deprecation",
   "-target:jvm-1.8",
-  "-language:_",
-  "-Ymacro-annotations"
+  "-language:_"
 )
 
 libraryDependencies += "org.scalatest"  %% "scalatest"    % "3.2.0" % "test"

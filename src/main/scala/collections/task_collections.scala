@@ -39,7 +39,8 @@ object task_collections {
       case "7" => "seven" case "8" => "eight" case "9" => "nine" case "10" => "ten" case any => any
     }
     val a = new StringBuilder
-    str.foreach(x => a.append(x + " "))
+    str.foreach(x => if (x == str.last) a.append(x) else // если элемент последний не добавляем " "
+      a.append(x + " "))
     a.toString
   }
 
@@ -58,7 +59,7 @@ object task_collections {
    * Реализуйте метод который примет две коллекции (два источника) и вернёт объединенный список уникальный значений
    **/
   def intersectionAuto(dealerOne: Iterable[Auto], dealerTwo: Iterable[Auto]): Iterable[Auto] = {
-    Iterable.empty
+    dealerTwo.toSet ++ dealerOne.toSet
   }
 
   /**
@@ -67,6 +68,6 @@ object task_collections {
    * и вернёт уникальный список машин обслуживающихся в первом дилерском центре и не обслуживающимся во втором
    **/
   def filterAllLeftDealerAutoWithoutRight(dealerOne: Iterable[Auto], dealerTwo: Iterable[Auto]): Iterable[Auto] = {
-    Iterable.empty
+    dealerOne.toSet &~ dealerTwo.toSet
   }
 }
