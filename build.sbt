@@ -4,7 +4,7 @@ name := "HomeWork2"
 
 version := "0.1"
 
-scalaVersion := "2.11.13"
+scalaVersion := "2.11.12"
 
 scalacOptions := List(
   "-encoding",
